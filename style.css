@@ -1,0 +1,835 @@
+/*
+Theme Name:	Pondasee
+Theme URI:  	
+Version: 2.0
+Author: Satrya
+Author URI:	http://tokokoo.com
+*/
+/* 
+   Table of Contents
+   =============================================================================
+	0 Reset Stylesheet
+	1 Base
+	2 Grid Layout
+	3 Typography
+	4 Form
+	5 Table
+	6 Images
+	7 Main
+	8 Utilities
+	9 Plugins
+	10 Media Queries
+	11 Conditional IE class
+   =============================================================================
+*/
+/* =============================================================================
+- Reset Stylesheet
+============================================================================= */
+body,
+figure {
+  margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer,
+header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: -moz-inline-stack;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  *zoom: 1;
+}
+
+audio:not([controls]),
+[hidden] {
+  display: none;
+  height: 0;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: text-bottom;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =============================================================================
+- Base
+============================================================================= */
+* html {
+  font-size: 100%;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+  overflow-y: scroll;
+  /* Keeps page centred in all browsers regardless of content height */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -webkit-font-smoothing: antialiased;
+  /* http://maxvoltar.com/archive/-Webkit-font-smoothing */
+}
+
+body {
+  background: white;
+  color: #555555;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  /* http://aestheticallyloyal.com/public/optimize-legibility/ */
+}
+
+/* 	SELECTION
+	----------------- */
+::-moz-selection {
+  background: black;
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: black;
+  color: white;
+  text-shadow: none;
+}
+
+/* 	LINKS
+	----------------- */
+a {
+  color: #00baff;
+  text-decoration: none;
+}
+a:visited {
+  color: #00baff;
+}
+a:hover {
+  color: #0095cc;
+  text-decoration: none;
+}
+a:focus {
+  outline: thin dotted;
+}
+
+/* =============================================================================
+- Grid Layout
+============================================================================= */
+.container {
+  margin: 0 auto;
+  max-width: 930px;
+  width: 100%;
+  *zoom: 1;
+}
+.container:before, .container:after {
+  content: "";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+
+.row {
+  *zoom: 1;
+}
+.row:before, .row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row [class*="column"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  margin-left: 3.22581%;
+  *zoom: 1;
+}
+.row [class*="column"]:before, .row [class*="column"]:after {
+  content: "";
+  display: table;
+}
+.row [class*="column"]:after {
+  clear: both;
+}
+.row [class*="column"]:first-child {
+  margin-left: 0;
+}
+
+.row .col1 {
+  width: 3.22581%;
+}
+
+.row .col2 {
+  width: 9.67742%;
+}
+
+.row .col3 {
+  width: 16.12903%;
+}
+
+.row .col4 {
+  width: 22.58065%;
+}
+
+.row .col5 {
+  width: 29.03226%;
+}
+
+.row .col6 {
+  width: 35.48387%;
+}
+
+.row .col7 {
+  width: 41.93548%;
+}
+
+.row .col8 {
+  width: 48.3871%;
+}
+
+.row .col9 {
+  width: 54.83871%;
+}
+
+.row .col10 {
+  width: 61.29032%;
+}
+
+.row .col11 {
+  width: 67.74194%;
+}
+
+.row .col12 {
+  width: 74.19355%;
+}
+
+.row .col13 {
+  width: 80.64516%;
+}
+
+.row .col14 {
+  width: 87.09677%;
+}
+
+.row .col15 {
+  width: 93.54839%;
+}
+
+.row .col16 {
+  width: 100%;
+}
+
+/* =============================================================================
+- Typography
+============================================================================= */
+/* 	HEADING
+	----------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.3em;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.3em;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+/* 	TEXT ELEMENT
+	----------------- */
+p {
+  margin: 0 0 1.5em;
+}
+
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 85%;
+}
+
+cite {
+  font-style: normal;
+}
+
+dfn {
+  font-style: italic;
+  font-weight: bold;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+  vertical-align: sub;
+}
+
+sub {
+  bottom: -0.25em;
+  vertical-align: super;
+}
+
+abbr,
+acronym {
+  font-size: 90%;
+  text-transform: uppercase;
+  border-bottom: 1px dotted #dddddd;
+  cursor: help;
+}
+
+del {
+  color: #aaaaaa;
+  text-decoration: line-through;
+  vertical-align: baseline;
+}
+
+pre {
+  background: #ffff99;
+  border-bottom: 1px solid #ff2;
+  border-top: 1px solid #ff2;
+  color: #990;
+  margin: 1.5em 0;
+  padding: 0.75em 0.45em;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap;
+  word-wrap: break-word;
+}
+
+code {
+  background: #ffff99;
+  color: #990;
+  font-size: 11px;
+  line-height: 1.2em;
+  padding: 0.3em;
+}
+
+pre,
+code,
+kbd,
+samp,
+tt {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+mark {
+  background: #ff0;
+  color: #990;
+  font-size: 11px;
+}
+
+/* 	BLOCKQUOTE
+	----------------- */
+blockquote {
+  border-left: 3px solid #eeeeee;
+  color: #aaaaaa;
+  font-style: italic;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  margin: 1em 40px;
+  padding-left: 1.35em;
+}
+blockquote em,
+blockquote i,
+blockquote cite {
+  font-style: normal;
+}
+blockquote cite {
+  color: #555555;
+  display: block;
+  padding: 10px 0 0 20px;
+  position: relative;
+}
+blockquote cite:before {
+  content: '\2014';
+  left: 0;
+  position: absolute;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+address {
+  display: block;
+  margin: 0 0 1.5em;
+  font-style: italic;
+}
+
+/* 	LISTS
+	----------------- */
+ul,
+ol {
+  margin: 1em 0;
+  padding: 0 0 0 2.25em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ol {
+  list-style: upper-alpha;
+}
+
+ol ol ol {
+  list-style: lower-roman;
+}
+
+ol ol ol ol {
+  list-style: lower-alpha;
+}
+
+li ul,
+li ol {
+  margin: 0;
+}
+
+dl {
+  margin: 0 1.625em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1.625em;
+}
+
+/* =============================================================================
+- Form
+============================================================================= */
+/* 	BASE FORM STYLES
+	----------------- */
+label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+fieldset {
+  border: 1px solid #dddddd;
+  font-size: 12px;
+  line-height: 1.3em;
+  margin: 0 0 1.5em;
+  padding: 0 1.4em 1.4em 1.4em;
+}
+
+legend {
+  background: whitesmoke;
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: block;
+  left: 0;
+  margin: 0;
+  padding: 0.3em 1.2em;
+  position: relative;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+  top: 0;
+}
+
+fieldset {
+  padding-top: 1.4em;
+}
+
+legend {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+/* =============================================================================
+- Table
+============================================================================= */
+/* 	STANDARD TABLE
+	----------------- */
+table {
+  font-size: 12px;
+  max-width: 100%;
+  width: 100%;
+}
+
+table,
+td {
+  border: 1px solid #e8e8e8;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  padding: 5px 10px;
+}
+
+th {
+  background-color: #e8e8e8;
+  border-right: 1px solid #e0e0e0;
+  color: #666;
+  margin: 5px 0 10px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+table button,
+table input {
+  *overflow: auto;
+}
+
+/* 	STRIPE TABLE
+	----------------- */
+table.striped tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* =============================================================================
+- Images
+============================================================================= */
+img {
+  height: auto;
+}
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* =============================================================================
+- Main
+============================================================================= */
+/* =============================================================================
+- Utilities
+============================================================================= */
+/* 	CLEARFIX
+	http://nicolasgallagher.com/micro-clearfix-hack/
+	----------------- */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* 	CLEAR ELEMENT
+	----------------- */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/*	Inline-Block
+	-------------------- */
+.iblock {
+  display: -moz-inline-stack;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  *zoom: 1;
+}
+
+/* 	Break text
+	-------------------- */
+.break {
+  word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+/* 	Truncate text
+	-------------------- */
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+/* 	Hide text
+	-------------------- */
+.hide-text {
+  overflow: hidden;
+  text-align: left;
+  text-indent: -119988px;
+}
+
+/* 	IMAGE REPLACEMENT
+	----------------- */
+.ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+}
+
+/* 	HIDE/SHOW ELEMENT
+	----------------- */
+.hide {
+  display: none;
+  visibility: hidden;
+}
+
+.show {
+  display: block;
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* 	FLOATING ALIGNMENT
+	----------------- */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignnone {
+  display: block;
+}
+
+/* 	QUICK FLOAT
+	----------------- */
+.fr {
+  display: inline;
+  float: right;
+}
+
+.fl {
+  display: inline;
+  float: left;
+}
+
+.fn {
+  float: none;
+  display: block;
+}
+
+/* 	TEXT ALIGNMENT
+	----------------- */
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+/* 	HR/STANDALONE BORDER
+	----------------- */
+hr {
+  border-top: 1px solid #eeeeee;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+  clear: both;
+  height: 1px;
+  margin: 1.5em 0;
+  min-height: 0;
+}
+hr.dotted {
+  border-style: dotted;
+}
+hr.dashed {
+  border-style: dashed;
+}
+hr.darkborder {
+  border-color: black;
+}
+hr.lightborder {
+  border-color: white;
+}
+
+/* 	POSITIONING
+	----------------- */
+.first {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.last {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.top {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* 	Text meant only for screen readers
+	----------------- */
+.assistive-text {
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+/* =============================================================================
+- Plugins
+============================================================================= */
+/* =============================================================================
+- Media Queries
+============================================================================= */
+/* =============================================================================
+- Conditional IE class
+============================================================================= */
